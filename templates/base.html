@@ -1,0 +1,89 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/custom.css'%}">
+    <title>{%block title%}{%endblock title%}</title>
+    <style>
+
+            body {
+              transform: translateY(-100px); /* Memulai dari luar layar (di atas) */
+              opacity: 0; /* Transparan pada awalnya */
+              transition: transform 0.6s ease-out, opacity 0.6s ease-out; /* Durasi dan efek transisi */
+            }
+            .loaded {
+              transform: translateY(0); /* Bergerak kembali ke posisi normal */
+              opacity: 1; /* Muncul saat swipe selesai */
+            }
+          .parallax {
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: 70% 25%;
+              height: 600px;
+              background-attachment: fixed;
+            }
+            .container-carousel{
+              height: 63vh;
+            }
+          
+          @media only screen and (max-width: 1200px) {
+            .counter{
+              width: 150px;
+            }
+            .parallax{
+              height: 200px;
+              background-position: 70% 8%;
+              height: 420px;
+             }
+             .carousel-inner{
+              height: 450px;
+             }
+             .container-carousel{
+              height: 300px;
+             }
+             .about-section{
+              flex-direction: column;
+             }
+          }
+          
+          @media only screen and (max-width: 600px) {
+            .nav-text{
+              display: none
+            }
+            .parallax {
+              height: 100px;
+              background-attachment: fixed;
+              background-position: 70% 15%;
+              height: 200px;
+             }
+            .counter{
+              width: 100px;
+            }
+            .carousel-inner{
+              height: 250px;
+             }
+             .card-student{
+              width: 60%;
+              height: 25%;
+              align-items: center;
+              justify-content: space-around;
+              font-size: 80%;
+             }
+          }
+    </style>
+</head>
+<body>
+    {%block content%}
+
+    {%endblock content%}
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'js/popper.min.js'%}"></script>
+    <script src="{%static 'js/custom.js'%}"></script>
+</body>
+</html>

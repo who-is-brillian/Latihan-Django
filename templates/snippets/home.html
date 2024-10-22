@@ -1,0 +1,66 @@
+{% load static %}
+<section class=" container-carousel position-relative mb-5" >
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+  
+      <!-- Carousel Inner -->
+      <div class="carousel-inner">
+  
+        <!-- Slide 1 with Parallax -->
+        <div class="parallax carousel-item active" style="background-image: url('{{banner1}}');">
+        </div>
+  
+        <!-- Slide 2 with Parallax -->
+        <div class="parallax carousel-item"  style="background-image: url('{{banner2}}');"> 
+        </div>
+  
+        <!-- Slide 3 with Parallax -->
+        <div class="parallax carousel-item"  style="background-image: url('{{banner3}}');">
+        </div>
+      </div>
+  
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+   <!-- Graduates Count Section, positioned in the middle of the carousel -->
+   <div class="card-student position-absolute top-100 start-50 translate-middle text-center z-3 d-flex gap-2 bg-dark1 p-2 rounded-3">
+    <div class="counter bg-medium-dark color-light rounded-3 shadow ">
+      <p class="fw-bold mb-0">Students</p>
+      <h6 id="counter1" class="display-4">0</h6>
+    </div>
+    <div class="counter bg-medium-dark color-light rounded-3 shadow">
+      <p class="fw-bold mb-0">Mentor</p>
+      <h6 id="counter2" class="display-4">0</h6>
+    </div>
+    <div class="counter bg-medium-dark color-light rounded-3 shadow">
+      <p class="fw-bold mb-0">Class</p>
+      <h6 id="counter3" class="display-4">0</h6>
+    </div>
+  </div>
+  </section>
+
+  <!-- About Us -->
+
+  <section class="align-items-center my-4 position-absolute">
+      <h1 class="color-dark text-center py-2 rounded-5 mt-5 fw-bold  ">About <span class="color-medium-dark">Us</span></h1>
+      <div class="about-section d-flex flex-wrap justify-content-center align-items-center">
+        <img src="{%static 'images/L1.png'%}" class="img-fluid col-12 col-md-4 col-lg-5" alt="logo">
+        <p class="col-12 col-md-8 col-lg-5 p-5 text-dark fs-5 rounded-3" style="text-align: justify;">
+          HELU (Helping Education) adalah platform belajar bahasa Inggris untuk siswa SMA/SMK dengan pendekatan design thinking. Platform ini membantu siswa mempersiapkan ujian masuk perguruan tinggi melalui metode belajar yang interaktif dan menyenangkan.
+          HELU menyediakan video pembelajaran, latihan soal, dan forum diskusi yang memudahkan siswa memahami materi. Semua konten dirancang agar belajar lebih menarik dan menjaga motivasi siswa.
+          Bekerja sama dengan penerbit, pembuat konten, dan institusi pendidikan, HELU memastikan materi berkualitas dan relevan dengan kebutuhan siswa, mendukung kesuksesan akademik mereka.
+        </p>
+      </div>
+    </section>

@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+{%block title%} {{title}} {%endblock title%}
+
+{%block content%}
+{%include 'snippets/navbar.html'%}
+
+<div class="container mt-5">
+    <h1 class="text-center display-2 fw-bolder">{{ headline }}</h1>
+    <h2 class="text-center mb-4">Daftar Artikel</h2>
+
+    <div class="row">
+        {% for post in semuaArtikel %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="{{ post.gambar.url }}" class="card-img-top" alt="{{ post.judul }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.judul }}</h5>
+                    <p class="card-text">{{ post.isi|truncatewords:20 }}</p>  <!-- truncatewords untuk memotong teks -->
+                    <span class="badge badge-primary">{{ post.pilih_kategori }}</span>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{%endblock content%}
